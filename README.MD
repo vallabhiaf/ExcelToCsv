@@ -1,7 +1,7 @@
 
 Thanks to @tonyerskine
 for the initial code 
-made some changes  in ti 
+made some changes  in it
 
 Instructions
 ---
