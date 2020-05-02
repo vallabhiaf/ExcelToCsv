@@ -10,12 +10,15 @@ Set objFSO = CreateObject("Scripting.FileSystemObject")
 
 src_file = objFSO.GetAbsolutePathName(Wscript.Arguments.Item(0))
 dest_file = objFSO.GetAbsolutePathName(WScript.Arguments.Item(1))
+worksheet_name = "Report"
 
 Dim oExcel
 Set oExcel = CreateObject("Excel.Application")
 
 Dim oBook
 Set oBook = oExcel.Workbooks.Open(src_file)
+oBook.Worksheets(worksheet_name).Activate
+
 
 oBook.SaveAs dest_file, csv_format
 
